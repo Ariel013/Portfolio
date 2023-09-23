@@ -18,34 +18,40 @@ const TAB_DATA = [
                   <img src="../images/windows-applications-svgrepo-com.svg" alt="Windows" title="Windows" className="w-8 h-8" />
                   <img src="../images/linux-tux-svgrepo-com.svg" alt="Linux" title="Linux" className="w-8 h-8" />
                   <img src="../images/microsoftoffice-svgrepo-com.svg" alt="Office" title="Office" className="w-8 h-8" />
-                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">75%</span>
+                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">65%</span>
                 </div>
                 <div className="w-full bg-slate-100 h-1 mb-6 mt-2">
-                  <div className="bg-red-500 h-2 rounded" style={{ width: "70%" }}></div>
+                  <div className="bg-red-500 h-2 rounded" style={{ width: "65%" }}></div>
                 </div>
                 <div className="flex items-center justify-between">
                   <img src="../images/html-svgrepo-com.svg" alt="HTML" title="HTML" className="w-8 h-8" />
                   <img src="../images/css-3-svgrepo-com.svg" alt="CSS" title="CSS" className="w-8 h-8" />
                   <img src="../images/php-svgrepo-com.svg" alt="PHP" title="PHP" className="w-8 h-8" />
-                  <img src="../images/javascript-svgrepo-com.svg" alt="JavaScript" title="JavaScript" className="w-8 h-8" />
+                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">65%</span>
+                </div>
+                <div className="w-full bg-slate-100 h-1 mb-6 mt-2">
+                  <div className="bg-cyan-500 h-2 rounded" style={{ width: "65%" }}></div>
+                </div>
+                <div className="flex items-center justify-between">
                   <img src="../images/database-svgrepo-com.svg" alt="SQL" title="SQL" className="w-8 h-8" />
                   <img src="../images/sqlite-svgrepo-com.svg" alt="SQLite" title="SQLite" className="w-8 h-8" />
                   <img src="../images/laravel-svgrepo-com.svg" alt="LARAVEL" title="LARAVEL" className="w-8 h-8" />
-                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">60%</span>
+                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">70%</span>
                 </div>
                 <div className="w-full bg-slate-100 h-1 mb-6 mt-2">
-                  <div className="bg-cyan-500 h-2 rounded" style={{ width: "60%" }}></div>
+                  <div className="bg-cyan-500 h-2 rounded" style={{ width: "70%" }}></div>
                 </div>
 
               </div>
             </div>
+            
 
             <div className="">
               <div className="">
                 <div className="flex items-center justify-between">
                   <img src="../images/vue-vuejs-javascript-js-framework-svgrepo-com.svg" alt="VUE JS" title="VUE JS" className="w-8 h-8" />
                   <img src="../images/beexpress-driver-svgrepo-com.svg" alt="EXPRESS JS" title="EXPRESS JS" className="w-8 h-8" />
-                  <img src="../images/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="REACT JS" title="REACT JS" className="w-8 h-8" />
+                  {/* <img src="../images/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="REACT JS" title="REACT JS" className="w-8 h-8" /> */}
                   <img src="../images/mongo-svgrepo-com.svg" alt="MONGO DB" title="MONGO DB" className="w-8 h-8" />
                   <img src="../images/python-svgrepo-com.svg" alt="PYTHON" title="PYTHON" className="w-8 h-8" />
                   <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">60%</span>
@@ -58,7 +64,7 @@ const TAB_DATA = [
                   <img src="../images/postman-icon-svgrepo-com.svg" alt="POSTMAN" title="POSTMAN" className="w-8 h-8" />
                   <img src="../images/git-svgrepo-com.svg" alt="GIT" title="GIT" className="w-8 h-8" />
                   <img src="../images/nest-middleware-js-svgrepo-com.svg" alt="NEST JS" title="NEST JS" className="w-8 h-8" />
-                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">65%</span>
+                  <span className="px-2 py-1 rounded-lg text-sm text-slate-500 font-medium min-w-[46px] text-center">60%</span>
                 </div>
                 <div className="w-full bg-slate-100 h-1 mb-6 mt-2">
                   <div className="bg-sky-500 h-2 rounded" style={{ width: "60%" }}></div>

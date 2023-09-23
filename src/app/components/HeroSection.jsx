@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h5 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -28,14 +28,14 @@ const HeroSection = () => {
                 1000,
                 // "Cybersecurity Enthusiast",
                 // 1000,
-                // "Network Technician",
-                // 1000,
+                "Network Technician",
+                1000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
-          </h1>
+          </h5>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
           I am a Fullstack Developer, and I&apos;m very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the process.
           </p>
@@ -65,9 +65,9 @@ const HeroSection = () => {
         >
           <div className=" bg-[#181818] w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative">
             <Image
-              src="/images/IMG_0138.JPG"
+              src="/images/ariel.JPG"
               alt="Ariel image"
-              Name="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
               height={300}
             />
