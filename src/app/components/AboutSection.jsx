@@ -176,7 +176,7 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Certifications",
+    title: "Certifs",
     id: "certifications",
     content: (
       <section className="text-gray-600 dark:text-gray-200 body-font ">
@@ -269,7 +269,7 @@ const AboutSection = () => {
               active={tab === "certifications"}
             >
               {" "}
-              Certifications{" "}
+              Certifs{" "}
             </TabButton>
           </div>
           <div className="mt-8">
