@@ -242,7 +242,7 @@ const AboutSection = () => {
           Passionate about technological innovation, I'm a Backend Web Developer with skills in NodeJs and MERN architecture. 
           With a pedagogical approach, I share my knowledge as a Pedagogical Assistant at EPITECH Benin, while paying particular attention to project management and new technologies. 
           <br /> 
-          My goal is to become a better developer with additionnal cybersecurity skills.
+          My goal is to become a better  developer with additionnal cybersecurity skills.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton

@@ -28,8 +28,8 @@ const HeroSection = () => {
                 1000,
                 // "Cybersecurity Enthusiast",
                 // 1000,
-                "Network Technician",
-                1000,
+                // "Network Technician",
+                // 1000,
               ]}
               wrapper="span"
               speed={50}
@@ -37,7 +37,7 @@ const HeroSection = () => {
             />
           </h5>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          I am a Fullstack Developer, and I&apos;m very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the process.
+          I am a Back-End Web Developer, and I&apos;m very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make your project a success.
           </p>
           <div>
             <Link
