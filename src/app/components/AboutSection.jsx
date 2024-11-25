@@ -238,12 +238,11 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          My name is Ariel Kevin SODJINOU. <br /> 
-          Passionate about technological innovation, I work as a Backend Developer with skills in NodeJs and MERN architecture. 
-          With a pedagogical approach, I share my knowledge as a Pedagogical Assistent at EPITECH Benin, while paying particular attention to project management and new technologies. 
-          My career path is constantly enriched by my inquisitive mind and my desire to push back the boundaries in everything I do.
           <br /> 
-          My goal is to become a better full-stack web developer with additionnal cybersecurity skills.
+          Passionate about technological innovation, I'm a Backend Web Developer with skills in NodeJs and MERN architecture. 
+          With a pedagogical approach, I share my knowledge as a Pedagogical Assistant at EPITECH Benin, while paying particular attention to project management and new technologies. 
+          <br /> 
+          My goal is to become a better developer with additionnal cybersecurity skills.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
