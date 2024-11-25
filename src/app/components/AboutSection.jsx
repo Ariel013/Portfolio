@@ -238,9 +238,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-          My name is Ariel Kevin SODJINOU. <br /> I have a
-          professional Bachelor degree in Computer Science specializing, in Systems, Networks and Security from
-          ESGIS-Benin, and I&apos;m currently completing my training at Epitech Benin&apos;s Coding Academy. <br /> My goal is to become a better full-stack web developer with additionnal cybersecurity skills.
+          My name is Ariel Kevin SODJINOU. <br /> 
+          Passionate about technological innovation, I work as a Backend Developer with skills in NodeJs and MERN architecture. 
+          With a pedagogical approach, I share my knowledge as a Pedagogical Assistent at EPITECH Benin, while paying particular attention to project management and new technologies. 
+          My career path is constantly enriched by my inquisitive mind and my desire to push back the boundaries in everything I do.
+          <br /> 
+          My goal is to become a better full-stack web developer with additionnal cybersecurity skills.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
