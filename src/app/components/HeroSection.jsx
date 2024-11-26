@@ -40,12 +40,12 @@ const HeroSection = () => {
           I am a Back-End Web Developer, and I&apos;m very passionate and dedicated to my work. I have acquired the skills and knowledge necessary to make your project a success.
           </p>
           <div>
-            <Link
+            {/* <Link
               href="/"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
               Hire Me
-            </Link>
+            </Link> */}
             <Link
               href="/images/CV.pdf"
               download="CV.pdf"
@@ -58,21 +58,22 @@ const HeroSection = () => {
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className=" bg-[#181818] w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative">
-            <Image
-              src="/images/ariel.JPG"
-              alt="Ariel image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
-          </div>
-        </motion.div>
+  initial={{ opacity: 0, scale: 0.5 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5 }}
+  className="col-span-4 place-self-center mt-4 lg:mt-0"
+>
+  <div className="bg-[#181818] w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] relative rounded-full overflow-hidden">
+    <Image
+      src="/images/ariel.JPG"
+      alt="Ariel image"
+      className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover object-center"
+      width={300}
+      height={300}
+    />
+  </div>
+</motion.div>
+
       </div>
     </section>
   );
