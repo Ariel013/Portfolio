@@ -1,25 +1,49 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-
-module.exports = {
+export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: {
+          light: '#4F46E5', // Indigo-600
+          DEFAULT: '#4338CA', // Indigo-700
+          dark: '#3730A3', // Indigo-800
+        },
+        accent: {
+          light: '#06B6D4', // Cyan-500
+          DEFAULT: '#0891B2', // Cyan-600
+          dark: '#0E7490', // Cyan-700
+        }
       },
-    },
-    colors: {
-      ...colors,
-      primary: colors.purple,
-      secondary: colors.pink,
+      fontFamily: {
+        sans: ['Inter var', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-down': 'slideDown 0.6s ease-out',
+        'bounce-slow': 'bounce 3s infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-30px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
     },
   },
   plugins: [],
-};
+}
