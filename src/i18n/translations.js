@@ -33,20 +33,20 @@ export const translations = {
       paragraphs: [
         "Développeur Fullstack avec une appétence pour le backend, je m'intéresse à la conception de systèmes à la croisée du logiciel, des données et de l'intelligence artificielle.",
         "Mon expérience m'a amené à travailler sur le développement web et les APIs, ainsi que sur des pipelines de données et le déploiement de modèles de machine learning. À EPITECH, j'ai formé et accompagné des étudiants sur des projets Full Stack, Data et IA.",
-        "J'aime transformer des problématiques complexes en solutions concrètes, robustes et maintenables — avec un œil de pentester certifié sur la sécurité.",
+        "J'aime transformer des problématiques complexes en solutions concrètes, robustes et maintenables.",
       ],
       highlights: [
         {
           title: 'Backend-first',
-          text: "Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel) — des APIs REST robustes, testées et documentées.",
+          text: "Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel), des APIs REST robustes, testées et documentées.",
         },
         {
           title: 'Data & Machine Learning',
-          text: "Pandas, Scikit-learn, TensorFlow/Keras, NLP, Kafka — des pipelines de données et des modèles jusqu'à la mise en production, dont des systèmes RAG.",
+          text: "Pandas, Scikit-learn, TensorFlow/Keras, NLP, Kafka; des pipelines de données et des modèles jusqu'à la mise en production.",
         },
         {
           title: 'Pédagogie & Cybersécurité',
-          text: "Deux ans et demi d'accompagnement pédagogique à EPITECH ; analyste cybersécurité certifié CAP et CNSP.",
+          text: "Deux ans et demi d'accompagnement pédagogique à EPITECH et analyste cybersécurité pour comprendre la sécurité des systèmes d'information.",
         },
       ],
       linkedin_cta: 'Connectons-nous sur LinkedIn',
@@ -78,7 +78,7 @@ export const translations = {
           position: 'Développeur Web & Accompagnateur Pédagogique Data/IA et Fullstack',
           description: [
             "Conception et animation de formations sur des projets Full Stack, Data et IA : développement web et APIs REST, EDA, NLP, machine learning supervisé, deep learning",
-            "Développement d'outils pédagogiques et d'applications internes en MERN, Python et FastAPI — dont une API REST de streaming simulé pour l'entraînement d'un modèle d'analyse de sentiments",
+            "Développement d'outils pédagogiques et d'applications internes en MERN, Python et FastAPI, dont une API REST de streaming simulé pour l'entraînement d'un modèle d'analyse de sentiments",
             "Évaluation de projets étudiants (pipelines ETL, modèles Scikit-learn / Keras, APIs, applications fullstack) et revues de code : qualité, architecture, bonnes pratiques",
             'BlueLock CTF App (MERN) : plateforme CTF, gestion des challenges, scoreboard en temps réel',
             "Dashboard (Node.js, Express.js) : backend d'un système de suivi académique interne",
