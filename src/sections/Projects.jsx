@@ -1,7 +1,7 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaStar, FaTimes, FaEye, FaArrowRight, FaReact, FaNodeJs, FaDocker, FaPython, FaCode } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTypescript, SiTailwindcss, SiNestjs, SiFlask, SiBootstrap, SiMysql, SiFlutter, SiNextdotjs, SiFastapi, SiPrisma, SiPostgresql, SiNuxtdotjs, SiLaravel, SiVuedotjs } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiTypescript, SiTailwindcss, SiNestjs, SiFlask, SiBootstrap, SiMysql, SiFlutter, SiNextdotjs, SiFastapi, SiPrisma, SiPostgresql, SiNuxtdotjs, SiLaravel, SiVuedotjs, SiVercel, SiSqlite } from 'react-icons/si';
 import { projects } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import { useProfile } from '../context/ProfileContext';
@@ -34,6 +34,10 @@ const TECH_MAP = {
   'Flask':        { icon: SiFlask,      color: '#ffffff' },
   'Bootstrap':    { icon: SiBootstrap,  color: '#7952B3' },
   'gRPC':         { icon: FaCode,       color: '#5BA3E0' },
+  'Vercel':       { icon: SiVercel,     color: '#ffffff' },
+  'Turso':        { icon: SiSqlite,     color: '#4FF8D2' },
+  'Drizzle':      { icon: FaCode,       color: '#C5F74F' },
+  'Hono':         { icon: FaCode,       color: '#E36002' },
 };
 
 const TechPill = ({ tech }) => {

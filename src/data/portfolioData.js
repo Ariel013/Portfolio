@@ -215,6 +215,30 @@ export const experiences = [
 
 export const projects = [
   {
+    id: 8,
+    title: "Arbitrage Strongman 2026 — FIBDA",
+    profile: "both",
+    description: "Logiciel d'arbitrage du Championnat National de Strongman (Fédération Ivoirienne de Bodybuilding), utilisé en direct le jour de la compétition : athlètes, pesée, ordre de passage, chronomètre, validation des performances, classement recalculé à chaque affichage, impressions officielles et neuf écrans publics pour le mur LED. Journal d'audit sur toute action qui touche un résultat.",
+    image: import.meta.env.BASE_URL + "projets/strongman.webp",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle", "Vercel"],
+    liveUrl: "https://strongman-pied.vercel.app/",
+    type: "WEB APP",
+    date: "Sept. 2026",
+    featured: true
+  },
+  {
+    id: 9,
+    title: "FIBDA Bodybuilding — Compétition",
+    profile: "both",
+    description: "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée, 200+ tests automatisés.",
+    image: import.meta.env.BASE_URL + "projets/fibda.webp",
+    technologies: ["React", "TypeScript", "Hono", "Turso", "Vercel"],
+    liveUrl: "https://fibda-bodybuilding.vercel.app/",
+    type: "WEB APP",
+    date: "Sept. 2026",
+    featured: true
+  },
+  {
     id: 1,
     title: "Bluelock",
     profile: "both",
@@ -301,8 +325,7 @@ export const projects = [
     type: "DATA / IA",
     date: "Déc. 2024",
     featured: false
-  },
-];
+  },];
 
 export const education = [
   {

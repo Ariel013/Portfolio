@@ -159,6 +159,16 @@ export const translations = {
           description:
             "Application web/mobile géolocalisée connectant les utilisateurs avec des prestataires de services locaux (artisans, plombiers, électriciens...) en Afrique de l'Ouest. Modèle communautaire : n'importe qui peut créer une fiche, le prestataire la revendique via OTP SMS. Intègre une carte interactive (Leaflet + OpenStreetMap), un bot WhatsApp et un système d'avis.",
         },
+        8: {
+          title: 'Arbitrage Strongman 2026 — FIBDA',
+          description:
+            "Logiciel d'arbitrage du Championnat National de Strongman (Fédération Ivoirienne de Bodybuilding), utilisé en direct le jour de la compétition : athlètes, pesée, ordre de passage, chronomètre, validation des performances, classement recalculé à chaque affichage, impressions officielles et neuf écrans publics pour le mur LED. Journal d'audit sur toute action qui touche un résultat.",
+        },
+        9: {
+          title: 'FIBDA Bodybuilding — Compétition',
+          description:
+            "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée, 200+ tests automatisés.",
+        },
       },
     },
 
@@ -394,6 +404,16 @@ export const translations = {
           title: 'NearYou',
           description:
             'Geolocated web/mobile app connecting users with local service providers (craftsmen, plumbers, electricians...) in West Africa. Community model: anyone can create a provider profile, which the provider can claim via SMS OTP. Features an interactive map (Leaflet + OpenStreetMap), a WhatsApp bot and a review system.',
+        },
+        8: {
+          title: 'Strongman 2026 Judging — FIBDA',
+          description:
+            "Judging software for the Ivorian National Strongman Championship (Ivorian Bodybuilding Federation), used live on competition day: athletes, weigh-in, running order, timer, performance validation, rankings recomputed on every display, official printouts and nine public screens for the LED wall. Audit log on every action that touches a result.",
+        },
+        9: {
+          title: 'FIBDA Bodybuilding — Competition',
+          description:
+            "Judging and stage-management app for a federal bodybuilding competition: entries and categories, judges' ballots on their phones with server acknowledgement, rankings and finals per discipline, stage control and public screens, printable documents. Serverless TypeScript API (Hono) on Vercel, Turso database, versioned optimistic writes, 200+ automated tests.",
         },
       },
     },
