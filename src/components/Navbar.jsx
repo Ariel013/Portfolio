@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon, FaBars, FaTimes, FaExchangeAlt } from 'react-icons/fa';
+import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { useProfile } from '../context/ProfileContext';
 
 const sectionIds = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
 
@@ -13,7 +12,6 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const { theme, toggleTheme } = useTheme();
   const { lang, toggleLang, t } = useLanguage();
-  const { profile, resetProfile } = useProfile();
 
   const navLinks = [
     { name: t.nav.home, href: '#home', id: 'home' },
@@ -110,24 +108,6 @@ const Navbar = () => {
 
             {/* Right controls */}
             <div className="flex items-center gap-2">
-
-              {/* Profile badge */}
-              {profile && (
-                <motion.button
-                  onClick={resetProfile}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  title="Changer de profil"
-                  className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold transition-colors duration-200 ${
-                    profile === 'data'
-                      ? 'bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 border border-violet-200 dark:border-violet-800/40'
-                      : 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/40'
-                  }`}
-                >
-                  <span>{profile === 'data' ? 'Data & IA' : 'Dev'}</span>
-                  <FaExchangeAlt className="w-2.5 h-2.5 opacity-60" />
-                </motion.button>
-              )}
 
               {/* Language toggle */}
               <motion.button

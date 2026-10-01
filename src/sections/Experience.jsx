@@ -3,7 +3,6 @@ import { useRef } from 'react';
 import { FaBriefcase, FaMapMarkerAlt, FaCalendar } from 'react-icons/fa';
 import { experiences } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { useProfile } from '../context/ProfileContext';
 
 // Palette cyclique — s'applique par index, indépendamment de l'ID
 // Ajouter autant d'expériences que voulu dans portfolioData.js sans toucher ici
@@ -49,7 +48,6 @@ const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { t } = useLanguage();
-  const { profile } = useProfile();
 
   return (
     <section
@@ -141,7 +139,7 @@ const Experience = () => {
 
                         {/* Description */}
                         <ul className="space-y-1.5 mb-4">
-                          {(exp.profileDescriptions?.[profile] || tr.description || exp.description).map((item, i) => (
+                          {(tr.description || exp.description).map((item, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
                               <span className={`mt-0.5 flex-shrink-0 text-xs ${theme.company}`}>▪</span>
                               <span className="leading-relaxed">{item}</span>

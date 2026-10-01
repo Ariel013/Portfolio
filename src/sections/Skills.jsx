@@ -2,25 +2,26 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import {
   FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaDocker, FaCode, FaTimes,
-  FaPython, FaSpider, FaLanguage, FaDatabase,
+  FaPython, FaLanguage, FaDatabase, FaRobot, FaLinux,
 } from 'react-icons/fa';
 import {
-  SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress,
-  SiMongodb, SiPostgresql, SiJavascript,
+  SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress, SiNestjs, SiFlask, SiLaravel, SiVuedotjs,
+  SiMongodb, SiPostgresql, SiMysql, SiSqlite, SiJavascript,
   SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras,
-  SiFastapi, SiApachekafka, SiPlotly, SiZapier, SiOpenai,
+  SiFastapi, SiApachekafka, SiZapier, SiOpenai,
+  SiRender, SiRailway, SiVercel, SiJest, SiPostman, SiSelenium, SiOwasp,
 } from 'react-icons/si';
 import { skills } from '../data/portfolioData';
-import { useProfile } from '../context/ProfileContext';
 import { useLanguage } from '../context/LanguageContext';
 
 const iconMap = {
   FaReact, SiNextdotjs, SiTypescript, SiTailwindcss,
-  FaJs: SiJavascript, FaHtml5, FaNodeJs, SiExpress,
-  SiMongodb, SiPostgresql, FaCode, FaGitAlt, FaDocker,
-  FaPython, FaSpider, FaLanguage, FaDatabase,
+  FaJs: SiJavascript, FaHtml5, FaNodeJs, SiExpress, SiNestjs, SiFlask, SiLaravel, SiVuedotjs,
+  SiMongodb, SiPostgresql, SiMysql, SiSqlite, FaCode, FaGitAlt, FaDocker, FaLinux,
+  FaPython, FaLanguage, FaDatabase, FaRobot,
   SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiKeras,
-  SiFastapi, SiApachekafka, SiPlotly, SiZapier, SiOpenai,
+  SiFastapi, SiApachekafka, SiZapier, SiOpenai,
+  SiRender, SiRailway, SiVercel, SiJest, SiPostman, SiSelenium, SiOwasp,
 };
 
 const brandColor = {
@@ -28,22 +29,19 @@ const brandColor = {
   SiTailwindcss: '#06B6D4', FaJs: '#F7DF1E', FaHtml5: '#E34F26',
   FaNodeJs: '#339933', SiExpress: null, SiMongodb: '#47A248',
   SiPostgresql: '#4169E1', FaCode: null, FaGitAlt: '#F05032',
-  FaDocker: '#2496ED',
-  FaPython: '#3776AB', FaSpider: null, FaLanguage: null, FaDatabase: '#4169E1',
+  FaDocker: '#2496ED', FaLinux: '#FCC624', FaRobot: '#0D9488',
+  SiNestjs: '#E0234E', SiFlask: null, SiLaravel: '#FF2D20', SiVuedotjs: '#42B883',
+  SiMysql: '#4479A1', SiSqlite: '#003B57',
+  SiRender: null, SiRailway: null, SiVercel: null, SiJest: '#C21325',
+  SiPostman: '#FF6C37', SiSelenium: '#43B02A', SiOwasp: null,
+  FaPython: '#3776AB', FaLanguage: null, FaDatabase: '#4169E1',
   SiPandas: '#150458', SiNumpy: '#4DABCF', SiScikitlearn: '#F7931E',
   SiTensorflow: '#FF6F00', SiKeras: '#D00000',
   SiFastapi: '#009688', SiApachekafka: '#231F20',
-  SiPlotly: '#3F4F75', SiZapier: '#FF4A00', SiOpenai: '#412991',
+  SiZapier: '#FF4A00', SiOpenai: '#412991',
 };
 
-const devCategoryTheme = {
-  Frontend: {
-    gradient: 'from-cyan-500/10 to-blue-500/10 dark:from-cyan-900/20 dark:to-blue-900/20',
-    border: 'border-cyan-200 dark:border-cyan-800/40 hover:border-cyan-400 dark:hover:border-cyan-600',
-    accent: 'text-cyan-600 dark:text-cyan-400',
-    dot: 'bg-cyan-500',
-    glow: 'shadow-cyan-500/10',
-  },
+const categoryTheme = {
   Backend: {
     gradient: 'from-green-500/10 to-emerald-500/10 dark:from-green-900/20 dark:to-emerald-900/20',
     border: 'border-green-200 dark:border-green-800/40 hover:border-green-400 dark:hover:border-green-600',
@@ -51,7 +49,35 @@ const devCategoryTheme = {
     dot: 'bg-green-500',
     glow: 'shadow-green-500/10',
   },
-  Outils: {
+  Frontend: {
+    gradient: 'from-cyan-500/10 to-blue-500/10 dark:from-cyan-900/20 dark:to-blue-900/20',
+    border: 'border-cyan-200 dark:border-cyan-800/40 hover:border-cyan-400 dark:hover:border-cyan-600',
+    accent: 'text-cyan-600 dark:text-cyan-400',
+    dot: 'bg-cyan-500',
+    glow: 'shadow-cyan-500/10',
+  },
+  'Data & ML': {
+    gradient: 'from-violet-500/10 to-purple-500/10 dark:from-violet-900/20 dark:to-purple-900/20',
+    border: 'border-violet-200 dark:border-violet-800/40 hover:border-violet-400 dark:hover:border-violet-600',
+    accent: 'text-violet-600 dark:text-violet-400',
+    dot: 'bg-violet-500',
+    glow: 'shadow-violet-500/10',
+  },
+  'IA & Automatisation': {
+    gradient: 'from-teal-500/10 to-cyan-500/10 dark:from-teal-900/20 dark:to-cyan-900/20',
+    border: 'border-teal-200 dark:border-teal-800/40 hover:border-teal-400 dark:hover:border-teal-600',
+    accent: 'text-teal-600 dark:text-teal-400',
+    dot: 'bg-teal-500',
+    glow: 'shadow-teal-500/10',
+  },
+  'Bases de données': {
+    gradient: 'from-blue-500/10 to-indigo-500/10 dark:from-blue-900/20 dark:to-indigo-900/20',
+    border: 'border-blue-200 dark:border-blue-800/40 hover:border-blue-400 dark:hover:border-blue-600',
+    accent: 'text-blue-600 dark:text-blue-400',
+    dot: 'bg-blue-500',
+    glow: 'shadow-blue-500/10',
+  },
+  'DevOps & Qualité': {
     gradient: 'from-orange-500/10 to-amber-500/10 dark:from-orange-900/20 dark:to-amber-900/20',
     border: 'border-orange-200 dark:border-orange-800/40 hover:border-orange-400 dark:hover:border-orange-600',
     accent: 'text-orange-600 dark:text-orange-400',
@@ -60,32 +86,7 @@ const devCategoryTheme = {
   },
 };
 
-const dataCategoryTheme = {
-  'Python & Data': {
-    gradient: 'from-blue-500/10 to-yellow-500/10 dark:from-blue-900/20 dark:to-yellow-900/20',
-    border: 'border-blue-200 dark:border-blue-800/40 hover:border-blue-400 dark:hover:border-blue-600',
-    accent: 'text-blue-600 dark:text-blue-400',
-    dot: 'bg-blue-500',
-    glow: 'shadow-blue-500/10',
-  },
-  'ML & IA': {
-    gradient: 'from-violet-500/10 to-purple-500/10 dark:from-violet-900/20 dark:to-purple-900/20',
-    border: 'border-violet-200 dark:border-violet-800/40 hover:border-violet-400 dark:hover:border-violet-600',
-    accent: 'text-violet-600 dark:text-violet-400',
-    dot: 'bg-violet-500',
-    glow: 'shadow-violet-500/10',
-  },
-  'Pipelines & Viz': {
-    gradient: 'from-teal-500/10 to-cyan-500/10 dark:from-teal-900/20 dark:to-cyan-900/20',
-    border: 'border-teal-200 dark:border-teal-800/40 hover:border-teal-400 dark:hover:border-teal-600',
-    accent: 'text-teal-600 dark:text-teal-400',
-    dot: 'bg-teal-500',
-    glow: 'shadow-teal-500/10',
-  },
-};
-
-const devCategoryOrder = ['Frontend', 'Backend', 'Outils'];
-const dataCategoryOrder = ['Python & Data', 'ML & IA', 'Pipelines & Viz'];
+const categoryOrder = ['Backend', 'Frontend', 'Data & ML', 'IA & Automatisation', 'Bases de données', 'DevOps & Qualité'];
 
 const IconPreview = ({ catSkills }) => (
   <div className="flex items-center gap-2">
@@ -139,16 +140,10 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const { t } = useLanguage();
-  const { profile } = useProfile();
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const categoryOrder = profile === 'data' ? dataCategoryOrder : devCategoryOrder;
-  const categoryTheme = profile === 'data' ? dataCategoryTheme : devCategoryTheme;
-
-  const filteredSkills = skills.filter((s) => s.profile === profile);
-
   const grouped = categoryOrder.reduce((acc, cat) => {
-    acc[cat] = filteredSkills.filter((s) => s.category === cat);
+    acc[cat] = skills.filter((s) => s.category === cat);
     return acc;
   }, {});
 

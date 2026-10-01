@@ -66,7 +66,7 @@ const Education = () => {
           </motion.div>
 
           {/* Cards */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {education.map((edu, index) => {
               const translated = t.education.items[edu.id] || {};
               const theme = eduTheme[index] || eduTheme[0];
@@ -99,7 +99,7 @@ const Education = () => {
                   {/* Period */}
                   <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                     <FaCalendar className="w-3.5 h-3.5" />
-                    <span>{edu.period}</span>
+                    <span>{translated.period || edu.period}</span>
                   </div>
 
                   {edu.grade && (

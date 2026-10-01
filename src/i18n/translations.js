@@ -14,9 +14,9 @@ export const translations = {
     // ── Hero ─────────────────────────────────────────────────────
     hero: {
       available: 'Disponible pour de nouvelles opportunités',
-      subtitle: 'Développeur Full Stack · Backend-first',
+      subtitle: 'Développeur Fullstack · Backend, Data (ML)',
       tagline:
-        "Je conçois des APIs robustes et des interfaces qui performent, du backend Node.js jusqu'au frontend React.",
+        "Je conçois des systèmes à la croisée du logiciel, des données et de l'IA : APIs robustes, pipelines de données, modèles de machine learning mis en production.",
       cta_contact: 'Me contacter',
       cta_cv: 'Télécharger CV',
     },
@@ -26,27 +26,27 @@ export const translations = {
       tag: 'Qui suis-je ?',
       title: 'À propos de moi',
       stats: [
-        { value: '2+', label: "Années d'expérience", sub: 'en production' },
-        { value: '5+', label: 'Projets livrés', sub: 'fullstack & IA' },
-        { value: '3', label: 'Domaines maîtrisés', sub: 'Web · Sécu · IA' },
+        { value: '3', label: "Années d'expérience", sub: 'dev, data, cyber' },
+        { value: '9', label: 'Projets livrés', sub: 'web, IA & data' },
+        { value: '3', label: 'Domaines', sub: 'Backend · Data/IA · Sécu' },
       ],
       paragraphs: [
-        "Développeur Full Stack avec une préférence marquée pour le backend (Node.js, architecture MERN), je conçois des applications web robustes et performantes orientées vers la résolution de vrais problèmes.",
-        "Accompagnateur à EPITECH, j'accompagne des étudiants en Data/IA et bonnes pratiques logicielles, alliant technique et pédagogie.",
-        "Curieux par nature, je m'investis également dans la cybersécurité et l'intelligence artificielle, deux domaines qui enrichissent ma vision du développement logiciel.",
+        "Développeur Fullstack avec une appétence pour le backend, je m'intéresse à la conception de systèmes à la croisée du logiciel, des données et de l'intelligence artificielle.",
+        "Mon expérience m'a amené à travailler sur le développement web et les APIs, ainsi que sur des pipelines de données et le déploiement de modèles de machine learning. À EPITECH, j'ai formé et accompagné des étudiants sur des projets Full Stack, Data et IA.",
+        "J'aime transformer des problématiques complexes en solutions concrètes, robustes et maintenables — avec un œil de pentester certifié sur la sécurité.",
       ],
       highlights: [
         {
-          title: 'Développeur Backend-first',
-          text: "Node.js, Express, architecture MERN — je conçois des APIs robustes orientées scalabilité.",
+          title: 'Backend-first',
+          text: "Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel) — des APIs REST robustes, testées et documentées.",
         },
         {
-          title: 'Pédagogue & Mentor',
-          text: "Accompagnateur Epitech : revues de code, modules de formation Data/IA, mentorat technique.",
+          title: 'Data & Machine Learning',
+          text: "Pandas, Scikit-learn, TensorFlow/Keras, NLP, Kafka — des pipelines de données et des modèles jusqu'à la mise en production, dont des systèmes RAG.",
         },
         {
-          title: 'Curiosité Cyber & IA',
-          text: "Analyste cybersécurité certifié (CAP/CNSP), je nourris aussi ma vision avec l'intelligence artificielle.",
+          title: 'Pédagogie & Cybersécurité',
+          text: "Deux ans et demi d'accompagnement pédagogique à EPITECH ; analyste cybersécurité certifié CAP et CNSP.",
         },
       ],
       linkedin_cta: 'Connectons-nous sur LinkedIn',
@@ -57,14 +57,14 @@ export const translations = {
       tag: 'Stack technique',
       title: 'Mes compétences',
       subtitle:
-        "Technologies que j'utilise pour concevoir des applications robustes, de l'API jusqu'à l'interface.",
+        "Technologies que j'utilise pour concevoir des applications robustes, de l'API jusqu'à l'interface, et des données jusqu'au modèle.",
       categories: {
+        Backend: { label: 'Backend', description: 'APIs REST, architecture serveur' },
         Frontend: { label: 'Frontend', description: 'Interfaces & expériences utilisateur' },
-        Backend: { label: 'Backend', description: 'APIs, bases de données & architecture serveur' },
-        Outils: { label: 'Outils & DevOps', description: 'Environnement de développement & infrastructure' },
-        'Python & Data': { label: 'Python & Data', description: 'Manipulation, analyse et traitement de données' },
-        'ML & IA': { label: 'ML & IA', description: 'Modèles supervisés, NLP, deep learning et pipelines RAG' },
-        'Pipelines & Viz': { label: 'Pipelines & Viz', description: 'APIs de données, streaming, visualisation et automatisation' },
+        'Data & ML': { label: 'Data & ML', description: 'Analyse, modèles supervisés, NLP, deep learning' },
+        'IA & Automatisation': { label: 'IA & Automatisation', description: 'Pipelines RAG, agents IA, automatisation no-code' },
+        'Bases de données': { label: 'Bases de données', description: 'Relationnel, documents, vectoriel' },
+        'DevOps & Qualité': { label: 'DevOps & Qualité', description: 'Déploiement, tests, sécurité applicative' },
       },
     },
 
@@ -72,26 +72,23 @@ export const translations = {
     experience: {
       tag: 'Parcours professionnel',
       title: 'Mon Parcours',
-      subtitle: 'Mon évolution professionnelle et mes expériences+6',
+      subtitle: 'Mon évolution professionnelle et mes expériences',
       items: {
         1: {
-          position: 'Accompagnateur Pédagogique Epitech',
+          position: 'Développeur Web & Accompagnateur Pédagogique Data/IA et Fullstack',
           description: [
-            'Conception de supports et animation de modules de formation',
-            'Suivi pédagogique et évaluation de la progression',
-            'Revue de code, assistance technique et mentorat',
-            "Développement d'outils internes améliorant les processus pédagogiques et organisationnels avec MongoDB, Express, React et Node.js",
-            'Formation et accompagnement d\'étudiants en développement web fullstack et bonnes pratiques logicielles',
-            "Création de tutoriels techniques, ateliers et ressources d'apprentissage en ingénierie logicielle",
-            'Supervision du réseau et résolution des incidents techniques',
-            "Administration de système de contrôle d'accès (badgeuse, gestion des utilisateurs)",
-            'Configuration, maintenance et optimisation de l\'infrastructure réseau (LAN, Wi-Fi, équipements)',
+            "Conception et animation de formations sur des projets Full Stack, Data et IA : développement web et APIs REST, EDA, NLP, machine learning supervisé, deep learning",
+            "Développement d'outils pédagogiques et d'applications internes en MERN, Python et FastAPI — dont une API REST de streaming simulé pour l'entraînement d'un modèle d'analyse de sentiments",
+            "Évaluation de projets étudiants (pipelines ETL, modèles Scikit-learn / Keras, APIs, applications fullstack) et revues de code : qualité, architecture, bonnes pratiques",
+            'BlueLock CTF App (MERN) : plateforme CTF, gestion des challenges, scoreboard en temps réel',
+            "Dashboard (Node.js, Express.js) : backend d'un système de suivi académique interne",
+            "Administration et maintenance du réseau informatique et des systèmes de contrôle d'accès",
           ],
         },
         2: {
           position: 'Formateur Automatisation No.Code',
           description: [
-            "Conception et animation d'un bootcamp d'automatisation no-code (Zapier + Baserow) pour une vingtaine de PMs juniors",
+            "Conception et animation d'un bootcamp d'automatisation no-code (Zapier + Baserow) pour des PMs juniors",
             "Création de cas pratiques métier : automatisation de flux de données, synchronisation d'applications, gestion d'emails et de notifications",
           ],
         },
@@ -124,6 +121,8 @@ export const translations = {
       // subtitle: 'Découvrez une sélection de mes réalisations récentes',
       filter_all: 'Tous',
       filter_featured: 'Favoris',
+      filter_web: 'Web',
+      filter_ia: 'IA / Data',
       view_project: 'Voir le projet',
       view_github: 'GitHub',
       click_hint: 'Cliquer pour les détails',
@@ -137,7 +136,7 @@ export const translations = {
         2: {
           title: 'RAG RH Assistant',
           description:
-            "Chatbot basé sur la méthode RAG (Retriever-Augmented Generation) pour répondre aux questions courantes des employés concernant les ressources humaines (politiques internes, avantages, congés, etc.). Ce système utilise un modèle d'IA pour récupérer des informations pertinentes et générer des réponses précises, automatisant ainsi les tâches RH et optimisant l'expérience des collaborateurs.",
+            "Chatbot RH basé sur un pipeline RAG : ingestion de documents RH (Notion), chunking, embeddings vectoriels OpenAI, stockage ChromaDB, interrogation par LLM. Déployé sur Hugging Face Spaces, migration pgvector/Supabase.",
         },
         3: {
           title: 'Hemosafe',
@@ -178,8 +177,9 @@ export const translations = {
       title: 'Mon Parcours Académique',
       // subtitle: 'Mon parcours académique et mes diplômes',
       items: {
-        1: { degree: 'Certificat concepteur développeur Web et Mobile (RNCP Niveau 5)' },
-        2: { degree: 'Licence en Informatique, Réseaux et Télécommunications Option Systèmes, Réseeaux et Sécurité' },
+        3: { degree: 'Master Conception et Développement de Solutions Informatiques', period: 'En cours' },
+        1: { degree: 'Certificat Concepteur et Développeur Web & Mobile (RNCP Niveau 5)' },
+        2: { degree: 'Licence Informatique, Réseaux et Télécommunications, option Systèmes, Réseaux et Sécurité' },
       },
     },
 
@@ -260,9 +260,9 @@ export const translations = {
     // ── Hero ─────────────────────────────────────────────────────
     hero: {
       available: 'Available for new opportunities',
-      subtitle: 'Full Stack Developer · Backend-first',
+      subtitle: 'Fullstack Developer · Backend, Data (ML)',
       tagline:
-        'I build robust APIs and high-performance interfaces, from Node.js backend to React frontend.',
+        'I design systems at the crossroads of software, data and AI: robust APIs, data pipelines, and machine learning models shipped to production.',
       cta_contact: 'Contact me',
       cta_cv: 'Download Resume',
     },
@@ -272,27 +272,27 @@ export const translations = {
       tag: 'Who am I',
       title: 'About me',
       stats: [
-        { value: '2+', label: 'Years of experience', sub: 'in production' },
-        { value: '5+', label: 'Projects delivered', sub: 'fullstack & AI' },
-        { value: '3', label: 'Fields mastered', sub: 'Web · Sec · AI' },
+        { value: '3', label: 'Years of experience', sub: 'dev, data, security' },
+        { value: '9', label: 'Projects delivered', sub: 'web, AI & data' },
+        { value: '3', label: 'Fields', sub: 'Backend · Data/AI · Sec' },
       ],
       paragraphs: [
-        "Full Stack Developer with a strong backend focus (Node.js, MERN architecture), I build robust and performant web applications aimed at solving real-world problems.",
-        "As a Teaching Assistant at EPITECH, I support students in Data/AI and software best practices, combining technical expertise with pedagogy.",
-        "Naturally curious, I also invest in cybersecurity and artificial intelligence — two fields that enrich my vision of software development.",
+        'Fullstack developer with a strong backend focus, I am drawn to designing systems where software, data and artificial intelligence meet.',
+        'My experience spans web development and APIs, as well as data pipelines and the deployment of machine learning models. At EPITECH, I trained and mentored students on Full Stack, Data and AI projects.',
+        'I enjoy turning complex problems into concrete, robust and maintainable solutions — with a certified pentester\'s eye on security.',
       ],
       highlights: [
         {
-          title: 'Backend-first Developer',
-          text: 'Node.js, Express, MERN architecture — I design robust, scalable APIs.',
+          title: 'Backend-first',
+          text: 'Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel) — robust, tested and documented REST APIs.',
         },
         {
-          title: 'Educator & Mentor',
-          text: 'EPITECH Teaching Assistant: code reviews, Data/AI training modules, technical mentoring.',
+          title: 'Data & Machine Learning',
+          text: 'Pandas, Scikit-learn, TensorFlow/Keras, NLP, Kafka — data pipelines and models all the way to production, including RAG systems.',
         },
         {
-          title: 'Cyber & AI Curiosity',
-          text: 'Certified security analyst (CAP/CNSP), I also explore artificial intelligence to broaden my engineering vision.',
+          title: 'Teaching & Cybersecurity',
+          text: 'Two and a half years of teaching assistance at EPITECH; CAP and CNSP certified cybersecurity analyst.',
         },
       ],
       linkedin_cta: 'Connect on LinkedIn',
@@ -303,14 +303,14 @@ export const translations = {
       tag: 'Tech stack',
       title: 'My skills',
       subtitle:
-        'Technologies I use to build robust applications, from the API layer to the interface.',
+        'Technologies I use to build robust applications, from the API layer to the interface, and from data to model.',
       categories: {
+        Backend: { label: 'Backend', description: 'REST APIs, server architecture' },
         Frontend: { label: 'Frontend', description: 'Interfaces & user experiences' },
-        Backend: { label: 'Backend', description: 'APIs, databases & server architecture' },
-        Outils: { label: 'Tools & DevOps', description: 'Development environment & infrastructure' },
-        'Python & Data': { label: 'Python & Data', description: 'Data manipulation, analysis and processing' },
-        'ML & IA': { label: 'ML & AI', description: 'Supervised models, NLP, deep learning and RAG pipelines' },
-        'Pipelines & Viz': { label: 'Pipelines & Viz', description: 'Data APIs, streaming, visualization and automation' },
+        'Data & ML': { label: 'Data & ML', description: 'Analysis, supervised models, NLP, deep learning' },
+        'IA & Automatisation': { label: 'AI & Automation', description: 'RAG pipelines, AI agents, no-code automation' },
+        'Bases de données': { label: 'Databases', description: 'Relational, document, vector' },
+        'DevOps & Qualité': { label: 'DevOps & Quality', description: 'Deployment, testing, application security' },
       },
     },
 
@@ -321,23 +321,20 @@ export const translations = {
       subtitle: 'My professional evolution and enriching experiences',
       items: {
         1: {
-          position: 'Teaching Assistant at EPITECH',
+          position: 'Web Developer & Teaching Assistant, Data/AI and Fullstack',
           description: [
-            'Design of training materials and facilitation of educational modules',
-            'Academic monitoring and progress evaluation',
-            'Code reviews, technical assistance and mentoring',
-            'Development of internal tools improving pedagogical and organizational processes with MongoDB, Express, React and Node.js',
-            'Training and mentoring students in fullstack web development and software best practices',
-            'Creation of technical tutorials, workshops and learning resources in software engineering',
-            'Network supervision and technical incident resolution',
-            'Administration of access control systems (badge readers, user management)',
-            'Configuration, maintenance and optimization of network infrastructure (LAN, Wi-Fi, equipment)',
+            'Design and delivery of training on Full Stack, Data and AI projects: web development and REST APIs, EDA, NLP, supervised machine learning, deep learning',
+            'Development of teaching tools and internal applications in MERN, Python and FastAPI — including a simulated streaming REST API used to train a sentiment analysis model',
+            'Evaluation of student projects (ETL pipelines, Scikit-learn / Keras models, APIs, fullstack applications) and code reviews: quality, architecture, best practices',
+            'BlueLock CTF App (MERN): CTF platform, challenge management, real-time scoreboard',
+            'Dashboard (Node.js, Express.js): backend of an internal academic tracking system',
+            'Administration and maintenance of the IT network and access control systems',
           ],
         },
         2: {
           position: 'No-Code Automation Trainer',
           description: [
-            'Design and facilitation of a no-code automation bootcamp (Zapier + Baserow) for around twenty junior PMs',
+            'Design and facilitation of a no-code automation bootcamp (Zapier + Baserow) for junior PMs',
             'Creation of practical business use cases: data flow automation, application synchronization, email and notification management',
           ],
         },
@@ -370,6 +367,8 @@ export const translations = {
       subtitle: 'A selection of my recent work',
       filter_all: 'All',
       filter_featured: 'Featured',
+      filter_web: 'Web',
+      filter_ia: 'AI / Data',
       view_project: 'View project',
       view_github: 'GitHub',
       click_hint: 'Click for details',
@@ -383,7 +382,7 @@ export const translations = {
         2: {
           title: 'RAG HR Assistant',
           description:
-            'Chatbot based on the RAG (Retriever-Augmented Generation) method to answer common employee questions about HR topics (internal policies, benefits, leave, etc.). The system uses an AI model to retrieve relevant information and generate accurate responses, automating HR tasks and optimizing the employee experience.',
+            'HR chatbot built on a RAG pipeline: ingestion of HR documents (Notion), chunking, OpenAI vector embeddings, ChromaDB storage, LLM querying. Deployed on Hugging Face Spaces, migrating to pgvector/Supabase.',
         },
         3: {
           title: 'Hemosafe',
@@ -405,6 +404,11 @@ export const translations = {
           description:
             'Geolocated web/mobile app connecting users with local service providers (craftsmen, plumbers, electricians...) in West Africa. Community model: anyone can create a provider profile, which the provider can claim via SMS OTP. Features an interactive map (Leaflet + OpenStreetMap), a WhatsApp bot and a review system.',
         },
+        7: {
+          title: 'Sentiment Analysis API',
+          description:
+            'Simulated streaming API serving 5,000 pre-generated comments per title (30 Netflix series), with gzip compression and a deterministic time cursor. Built to train and evaluate sentiment analysis models under realistic conditions.',
+        },
         8: {
           title: 'Strongman 2026 Judging — FIBDA',
           description:
@@ -424,8 +428,9 @@ export const translations = {
       title: 'Academic Background',
       subtitle: 'My academic journey and degrees',
       items: {
+        3: { degree: "Master's in Software Solutions Design and Development", period: 'In progress' },
         1: { degree: 'Certificate in Web & Mobile Application Design and Development (RNCP Level 5)' },
-        2: { degree: "Bachelor's Degree in Computer Science, Networks and Telecommunications" },
+        2: { degree: "Bachelor's Degree in Computer Science, Networks and Telecommunications, Systems, Networks and Security track" },
       },
     },
 

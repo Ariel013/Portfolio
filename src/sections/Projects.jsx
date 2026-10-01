@@ -4,7 +4,6 @@ import { FaGithub, FaExternalLinkAlt, FaStar, FaTimes, FaEye, FaArrowRight, FaRe
 import { SiMongodb, SiExpress, SiTypescript, SiTailwindcss, SiNestjs, SiFlask, SiBootstrap, SiMysql, SiFlutter, SiNextdotjs, SiFastapi, SiPrisma, SiPostgresql, SiNuxtdotjs, SiLaravel, SiVuedotjs, SiVercel, SiSqlite } from 'react-icons/si';
 import { projects } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { useProfile } from '../context/ProfileContext';
 
 const TECH_MAP = {
   'React':        { icon: FaReact,      color: '#61DAFB' },
@@ -59,7 +58,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeDot, setActiveDot] = useState(0);
   const { t } = useLanguage();
-  const { profile } = useProfile();
+  const [filter, setFilter] = useState('all');
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 640);
   const visibleCount = isMobile ? 1 : 3;
 
@@ -69,16 +68,18 @@ const Projects = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const filteredProjects = projects.filter(
-    (p) => p.profile === profile || p.profile === 'both'
-  );
+  const filters = [
+    { key: 'all', label: t.projects.filter_all },
+    { key: 'web', label: t.projects.filter_web },
+    { key: 'ia', label: t.projects.filter_ia },
+  ];
+  const matchesFilter = (p) =>
+    filter === 'all' || (filter === 'ia' ? p.type === 'IA / DATA' : p.type !== 'IA / DATA');
+  const filteredProjects = projects.filter(matchesFilter);
   const totalDots = isMobile ? filteredProjects.length : Math.ceil(filteredProjects.length / visibleCount);
 
   const getTitle = (p) => t.projects.items[p.id]?.title || p.title;
-  const getDesc = (p) => {
-    if (p.profile === 'both' && p.descriptions?.[profile]) return p.descriptions[profile];
-    return t.projects.items[p.id]?.description || p.description;
-  };
+  const getDesc = (p) => t.projects.items[p.id]?.description || p.description;
 
   const GAP = isMobile ? 16 : 20;
 
@@ -154,6 +155,22 @@ const Projects = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                   {t.projects.title}
                 </h2>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {filters.map((f) => (
+                  <button
+                    key={f.key}
+                    type="button"
+                    onClick={() => { setFilter(f.key); setActiveDot(0); scrollRef.current?.scrollTo({ left: 0 }); }}
+                    className={`px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors duration-200 ${
+                      filter === f.key
+                        ? 'bg-primary-light text-white border-primary-light'
+                        : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-primary-light'
+                    }`}
+                  >
+                    {f.label}
+                  </button>
+                ))}
               </div>
             </div>
 

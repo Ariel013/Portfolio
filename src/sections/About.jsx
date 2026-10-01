@@ -1,11 +1,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaLinkedin, FaCode, FaChalkboardTeacher, FaShieldAlt, FaDatabase, FaRobot } from 'react-icons/fa';
-import { personalInfo, profileData } from '../data/portfolioData';
-import { useProfile } from '../context/ProfileContext';
+import { FaLinkedin, FaCode, FaShieldAlt, FaDatabase } from 'react-icons/fa';
+import { personalInfo } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 
-const devHighlightThemes = [
+const highlightThemes = [
   {
     icon: FaCode,
     bg: 'bg-violet-50 dark:bg-violet-900/20',
@@ -15,47 +14,20 @@ const devHighlightThemes = [
     dot: 'bg-violet-500',
   },
   {
-    icon: FaChalkboardTeacher,
-    bg: 'bg-amber-50 dark:bg-amber-900/20',
-    border: 'border-amber-100 dark:border-amber-800/30',
-    iconWrap: 'bg-gradient-to-br from-amber-500/15 to-yellow-500/15',
-    iconColor: 'text-amber-500 dark:text-amber-400',
-    dot: 'bg-amber-500',
-  },
-  {
-    icon: FaShieldAlt,
-    bg: 'bg-rose-50 dark:bg-rose-900/20',
-    border: 'border-rose-100 dark:border-rose-800/30',
-    iconWrap: 'bg-gradient-to-br from-rose-500/15 to-red-500/15',
-    iconColor: 'text-rose-500 dark:text-rose-400',
-    dot: 'bg-rose-500',
-  },
-];
-
-const dataHighlightThemes = [
-  {
     icon: FaDatabase,
-    bg: 'bg-violet-50 dark:bg-violet-900/20',
-    border: 'border-violet-100 dark:border-violet-800/30',
-    iconWrap: 'bg-gradient-to-br from-violet-500/15 to-purple-500/15',
-    iconColor: 'text-violet-500 dark:text-violet-400',
-    dot: 'bg-violet-500',
-  },
-  {
-    icon: FaChalkboardTeacher,
-    bg: 'bg-amber-50 dark:bg-amber-900/20',
-    border: 'border-amber-100 dark:border-amber-800/30',
-    iconWrap: 'bg-gradient-to-br from-amber-500/15 to-yellow-500/15',
-    iconColor: 'text-amber-500 dark:text-amber-400',
-    dot: 'bg-amber-500',
-  },
-  {
-    icon: FaRobot,
     bg: 'bg-teal-50 dark:bg-teal-900/20',
     border: 'border-teal-100 dark:border-teal-800/30',
     iconWrap: 'bg-gradient-to-br from-teal-500/15 to-cyan-500/15',
     iconColor: 'text-teal-500 dark:text-teal-400',
     dot: 'bg-teal-500',
+  },
+  {
+    icon: FaShieldAlt,
+    bg: 'bg-amber-50 dark:bg-amber-900/20',
+    border: 'border-amber-100 dark:border-amber-800/30',
+    iconWrap: 'bg-gradient-to-br from-amber-500/15 to-yellow-500/15',
+    iconColor: 'text-amber-500 dark:text-amber-400',
+    dot: 'bg-amber-500',
   },
 ];
 
@@ -72,10 +44,6 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { t } = useLanguage();
-  const { profile } = useProfile();
-
-  const pData = profileData[profile] || profileData.dev;
-  const highlightThemes = profile === 'data' ? dataHighlightThemes : devHighlightThemes;
 
   const statColors = [
     'from-violet-500 to-indigo-500',
@@ -123,9 +91,9 @@ const About = () => {
                 />
               </div>
 
-              {/* Stats — profile-aware */}
+              {/* Stats */}
               <div className="grid grid-cols-3 gap-4">
-                {pData.about.stats.map((s, i) => (
+                {t.about.stats.map((s, i) => (
                   <div
                     key={s.label}
                     className={`text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border ${statBorders[i]}`}
@@ -145,16 +113,16 @@ const About = () => {
             {/* Right: text + highlights + CTA */}
             <motion.div variants={item} className="space-y-8">
               <div className="space-y-4">
-                {pData.about.paragraphs.map((p, i) => (
+                {t.about.paragraphs.map((p, i) => (
                   <p key={i} className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                     {p}
                   </p>
                 ))}
               </div>
 
-              {/* Highlights — profile-aware */}
+              {/* Highlights */}
               <div className="space-y-3 pt-2">
-                {pData.about.highlights.map(({ title, text }, i) => {
+                {t.about.highlights.map(({ title, text }, i) => {
                   const theme = highlightThemes[i];
                   const Icon = theme.icon;
                   return (

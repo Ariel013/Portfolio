@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaDownload, FaArrowRight } from 'react-icons/fa';
-import { personalInfo, profileData } from '../data/portfolioData';
-import { useProfile } from '../context/ProfileContext';
+import { personalInfo, profile } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 
 const container = {
@@ -15,8 +14,6 @@ const item = {
 
 const Hero = () => {
   const { t } = useLanguage();
-  const { profile } = useProfile();
-  const pData = profileData[profile] || profileData.dev;
 
   return (
     <section
@@ -63,17 +60,17 @@ const Hero = () => {
               </span>
             </motion.h1>
 
-            {/* Subtitle — profile-aware */}
+            {/* Subtitle */}
             <motion.p variants={item} className="text-xl md:text-2xl font-semibold text-gray-500 dark:text-gray-400 mb-6">
-              {pData.subtitle}
+              {t.hero.subtitle}
             </motion.p>
 
-            {/* Tagline — profile-aware */}
+            {/* Tagline */}
             <motion.p
               variants={item}
               className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-10 max-w-lg"
             >
-              {pData.tagline}
+              {t.hero.tagline}
             </motion.p>
 
             {/* CTA */}
@@ -88,7 +85,7 @@ const Hero = () => {
                 <FaArrowRight className="w-3.5 h-3.5" />
               </motion.a>
               <motion.a
-                href={pData.resumeUrl}
+                href={profile.resumeUrl}
                 download
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
@@ -99,7 +96,7 @@ const Hero = () => {
               </motion.a>
             </motion.div>
 
-            {/* Social + Stack pills — profile-aware */}
+            {/* Social + Stack pills */}
             <motion.div variants={item} className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-3">
                 <motion.a
@@ -127,7 +124,7 @@ const Hero = () => {
               <div className="w-px h-6 bg-gray-200 dark:bg-gray-700" />
 
               <div className="flex flex-wrap gap-2">
-                {pData.stackPills.map((pill) => (
+                {profile.stackPills.map((pill) => (
                   <span
                     key={pill.label}
                     className={`px-2.5 py-1 text-xs font-medium rounded-md border ${pill.color}`}
@@ -171,10 +168,10 @@ const Hero = () => {
                 className="absolute -right-6 top-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-4 py-3 shadow-xl shadow-black/5"
               >
                 <div className="text-2xl font-bold text-gray-900 dark:text-white leading-none">
-                  {pData.about.stats[0].value}
+                  {t.about.stats[0].value}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                  {pData.about.stats[0].sub}
+                  {t.about.stats[0].sub}
                 </div>
               </motion.div>
 
@@ -186,10 +183,10 @@ const Hero = () => {
                 className="absolute -left-8 bottom-10 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl px-4 py-3 shadow-xl shadow-black/5"
               >
                 <div className="text-2xl font-bold text-gray-900 dark:text-white leading-none">
-                  {pData.about.stats[1].value}
+                  {t.about.stats[1].value}
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                  {pData.about.stats[1].sub}
+                  {t.about.stats[1].sub}
                 </div>
               </motion.div>
             </div>
