@@ -3,7 +3,7 @@ export const personalInfo = {
   email: "kevin.sodjinou@epitech.eu",
   phone: "+33 0759554925",
   whatsapp: "22961566704",
-  location: "Noisy-le-Grand, France",
+  location: "Paris, France",
   avatar: "https://res.cloudinary.com/dywgshhwp/image/upload/v1774098701/Identity_uql9xt.png",
   social: {
     linkedin: "https://www.linkedin.com/in/ariel-kevin-sodjinou/",
