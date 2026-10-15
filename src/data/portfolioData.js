@@ -265,19 +265,19 @@ export const education = [
 export const certifications = [
   {
     id: 1,
-    name: "Certified Application Pentester (CAP)",
+    name: "Certified AppSec Practitioner (CAP) — Mock Exam",
     issuer: "SecOps Group",
     date: "Aout. 2023",
     image: "https://res.cloudinary.com/dywgshhwp/image/upload/v1778554792/cap_rnzxld.png",
-    url: "https://collection.cloudinary.com/dywgshhwp/2384029bba7ffc8517b2acd703df56bd",
+    url: "https://res.cloudinary.com/dywgshhwp/image/upload/v1792076331/CertifiedAppSecPractitioner_CAP-MOCK-EXAM_bugaco.jpg",
   },
   {
     id: 2,
-    name: "Certified Network Security Practitioner (CNSP)",
+    name: "Certified Network Security Practitioner (CNSP) — Mock Exam",
     issuer: "SecOps Group",
     date: "Aout. 2023",
     image: "https://res.cloudinary.com/dywgshhwp/image/upload/v1778554792/cnsp_mq2dji.png",
-    url: "https://collection.cloudinary.com/dywgshhwp/bcce73d452b889a144d782fd95293f9d",
+    url: "https://res.cloudinary.com/dywgshhwp/image/upload/v1792076332/CertifiedNetworkSecurityPractitioner_CNSP-MOCK-EXAM_edoymy.jpg",
   },
   {
     id: 3,

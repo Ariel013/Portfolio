@@ -279,7 +279,7 @@ export const translations = {
       paragraphs: [
         'Fullstack developer with a strong backend focus, I am drawn to designing systems where software, data and artificial intelligence meet.',
         'My experience spans web development and APIs, as well as data pipelines and the deployment of machine learning models. At EPITECH, I trained and mentored students on Full Stack, Data and AI projects.',
-        'I enjoy turning complex problems into concrete, robust and maintainable solutions — with a certified pentester\'s eye on security.',
+        'I enjoy turning complex problems into concrete, robust and maintainable solutions.',
       ],
       highlights: [
         {
@@ -292,7 +292,7 @@ export const translations = {
         },
         {
           title: 'Teaching & Cybersecurity',
-          text: 'Two and a half years of teaching assistance at EPITECH; CAP and CNSP certified cybersecurity analyst.',
+          text: 'Two and a half years of teaching assistance at EPITECH, and work as a cybersecurity analyst to understand information system security.',
         },
       ],
       linkedin_cta: 'Connect on LinkedIn',
