@@ -25,3 +25,5 @@ node_modules
 .env
 .env.local
 .env.*.local
+# Build Vite — Vercel recompile à chaque déploiement
+dist
