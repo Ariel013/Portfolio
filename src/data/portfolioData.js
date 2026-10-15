@@ -15,11 +15,11 @@ export const personalInfo = {
   },
 };
 
-// Profil unique — aligné sur le CV (public/Ariel-Kevin-SODJINOU.pdf).
+// Profil unique — aligné sur le CV (public/Ariel-Kevin-SODJINOU-CV.pdf).
 // Les textes (sous-titre, accroche, à propos) vivent dans src/i18n/translations.js
 // pour être traduits ; ici, seulement ce qui ne se traduit pas.
 export const profile = {
-  resumeUrl: import.meta.env.BASE_URL + 'Ariel-Kevin-SODJINOU.pdf',
+  resumeUrl: import.meta.env.BASE_URL + 'Ariel-Kevin-SODJINOU-CV.pdf',
   stackPills: [
     { label: 'Node.js', color: 'bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20' },
     { label: 'Python', color: 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/20' },
@@ -269,6 +269,7 @@ export const certifications = [
     issuer: "SecOps Group",
     date: "Aout. 2023",
     image: "https://res.cloudinary.com/dywgshhwp/image/upload/v1778554792/cap_rnzxld.png",
+    url: "https://collection.cloudinary.com/dywgshhwp/2384029bba7ffc8517b2acd703df56bd",
   },
   {
     id: 2,
@@ -276,6 +277,7 @@ export const certifications = [
     issuer: "SecOps Group",
     date: "Aout. 2023",
     image: "https://res.cloudinary.com/dywgshhwp/image/upload/v1778554792/cnsp_mq2dji.png",
+    url: "https://collection.cloudinary.com/dywgshhwp/bcce73d452b889a144d782fd95293f9d",
   },
   {
     id: 3,

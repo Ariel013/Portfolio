@@ -86,7 +86,7 @@ const Hero = () => {
               </motion.a>
               <motion.a
                 href={profile.resumeUrl}
-                download
+                download="Ariel-Kevin-SODJINOU-CV.pdf"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 rounded-xl font-semibold hover:border-primary-light dark:hover:border-primary-light hover:text-primary-light dark:hover:text-primary-light transition-all duration-300 shadow-sm"
