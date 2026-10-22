@@ -78,71 +78,34 @@ const About = () => {
             </h2>
           </motion.div>
 
+          {/* Stats */}
+          <motion.div variants={item} className="grid grid-cols-3 gap-4 mb-12">
+            {t.about.stats.map((s, i) => (
+              <div
+                key={s.label}
+                className={`text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border ${statBorders[i]}`}
+              >
+                <div className={`text-3xl font-bold bg-gradient-to-r ${statColors[i]} bg-clip-text text-transparent mb-1`}>
+                  {s.value}
+                </div>
+                <div className="text-xs font-semibold text-gray-700 dark:text-gray-300 leading-tight">
+                  {s.label}
+                </div>
+                <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{s.sub}</div>
+              </div>
+            ))}
+          </motion.div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* Left: image + stats */}
-            <motion.div variants={item} className="space-y-8">
-              <div className="relative max-w-sm mx-auto lg:mx-0">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-accent-light/20 rounded-3xl transform rotate-3 scale-105" />
-                <img
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  className="relative rounded-3xl shadow-2xl w-full object-cover"
-                />
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4">
-                {t.about.stats.map((s, i) => (
-                  <div
-                    key={s.label}
-                    className={`text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border ${statBorders[i]}`}
-                  >
-                    <div className={`text-3xl font-bold bg-gradient-to-r ${statColors[i]} bg-clip-text text-transparent mb-1`}>
-                      {s.value}
-                    </div>
-                    <div className="text-xs font-semibold text-gray-700 dark:text-gray-300 leading-tight">
-                      {s.label}
-                    </div>
-                    <div className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{s.sub}</div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Right: text + highlights + CTA */}
+            {/* Left: text + CTA */}
             <motion.div variants={item} className="space-y-8">
               <div className="space-y-4">
                 {t.about.paragraphs.map((p, i) => (
-                  <p key={i} className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p key={i} className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                     {p}
                   </p>
                 ))}
-              </div>
-
-              {/* Highlights */}
-              <div className="space-y-3 pt-2">
-                {t.about.highlights.map(({ title, text }, i) => {
-                  const theme = highlightThemes[i];
-                  const Icon = theme.icon;
-                  return (
-                    <div
-                      key={title}
-                      className={`flex gap-4 p-4 rounded-2xl ${theme.bg} border ${theme.border} transition-all duration-200`}
-                    >
-                      <div className={`flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl ${theme.iconWrap}`}>
-                        <Icon className={`w-5 h-5 ${theme.iconColor}`} />
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className={`w-1.5 h-1.5 rounded-full ${theme.dot} flex-shrink-0`} />
-                          <span className="text-sm font-bold text-gray-900 dark:text-white">{title}</span>
-                        </div>
-                        <div className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{text}</div>
-                      </div>
-                    </div>
-                  );
-                })}
               </div>
 
               {/* LinkedIn CTA */}
@@ -157,6 +120,31 @@ const About = () => {
                 <FaLinkedin className="w-5 h-5" />
                 {t.about.linkedin_cta}
               </motion.a>
+            </motion.div>
+
+            {/* Right: highlights */}
+            <motion.div variants={item} className="space-y-3">
+              {t.about.highlights.map(({ title, text }, i) => {
+                const theme = highlightThemes[i];
+                const Icon = theme.icon;
+                return (
+                  <div
+                    key={title}
+                    className={`flex gap-4 p-4 rounded-2xl ${theme.bg} border ${theme.border} transition-all duration-200`}
+                  >
+                    <div className={`flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-xl ${theme.iconWrap}`}>
+                      <Icon className={`w-5 h-5 ${theme.iconColor}`} />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-0.5">
+                        <span className={`w-1.5 h-1.5 rounded-full ${theme.dot} flex-shrink-0`} />
+                        <span className="text-sm font-bold text-gray-900 dark:text-white">{title}</span>
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{text}</div>
+                    </div>
+                  </div>
+                );
+              })}
             </motion.div>
 
           </div>

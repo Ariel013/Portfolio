@@ -4,7 +4,7 @@ export const personalInfo = {
   phone: "+33 0759554925",
   whatsapp: "22961566704",
   location: "Paris, France",
-  avatar: "https://res.cloudinary.com/dywgshhwp/image/upload/v1774098701/Identity_uql9xt.png",
+  avatar: "https://res.cloudinary.com/dywgshhwp/image/upload/f_auto,q_auto,w_800/v1792669711/Portrait_professionnel_d_un_homme_en_chemise_blanche_gmra6d.png",
   social: {
     linkedin: "https://www.linkedin.com/in/ariel-kevin-sodjinou/",
     github: "https://github.com/Ariel013",
