@@ -68,7 +68,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2"
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-light to-accent-light flex items-center justify-center shadow-md shadow-indigo-500/20">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-light to-accent-dark flex items-center justify-center shadow-md shadow-indigo-500/20">
                 <span className="text-white text-xs font-bold tracking-tight">AK</span>
               </div>
               <span className="font-bold text-gray-900 dark:text-white text-sm hidden sm:block">
@@ -143,7 +143,7 @@ const Navbar = () => {
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold bg-gradient-to-r from-primary-light to-accent-light text-white rounded-lg shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-200"
+                className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-lg shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-200"
               >
                 {t.nav.cta}
               </motion.a>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   <a
                     href="#contact"
                     onClick={handleNavClick}
-                    className="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-xl font-semibold text-sm"
+                    className="flex items-center justify-center px-4 py-3 bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-xl font-semibold text-sm"
                   >
                     {t.nav.cta}
                   </a>

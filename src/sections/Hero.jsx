@@ -79,7 +79,7 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-xl font-semibold shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-xl font-semibold shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-300"
               >
                 {t.hero.cta_contact}
                 <FaArrowRight className="w-3.5 h-3.5" />

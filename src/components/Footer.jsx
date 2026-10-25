@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-light to-accent-light flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-light to-accent-dark flex items-center justify-center">
                 <span className="text-white text-xs font-bold">AK</span>
               </div>
               <h3 className="font-bold bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent">

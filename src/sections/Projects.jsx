@@ -271,7 +271,7 @@ const Projects = () => {
                 <div className="flex items-center justify-between mt-7">
                   <button
                     onClick={handleNext}
-                    className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-full font-semibold text-sm shadow-md shadow-indigo-500/25 hover:opacity-90 transition-opacity"
+                    className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-full font-semibold text-sm shadow-md shadow-indigo-500/25 hover:opacity-90 transition-opacity"
                   >
                     {t.ui.scroll}
                     <FaArrowRight className="w-3.5 h-3.5" />
@@ -386,7 +386,7 @@ const Projects = () => {
                       href={selectedProject.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shadow-md shadow-indigo-500/20"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shadow-md shadow-indigo-500/20"
                     >
                       <FaExternalLinkAlt className="w-3.5 h-3.5" />
                       {t.projects.view_project}

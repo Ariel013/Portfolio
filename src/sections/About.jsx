@@ -115,7 +115,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-dark text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <FaLinkedin className="w-5 h-5" />
                 {t.about.linkedin_cta}
