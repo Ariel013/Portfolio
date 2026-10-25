@@ -1,10 +1,15 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { translations } from '../i18n/translations';
 
 const LanguageContext = createContext(null);
 
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('fr');
+
+  // Les lecteurs d'écran choisissent leur voix d'après l'attribut lang
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const toggleLang = () => setLang((l) => (l === 'fr' ? 'en' : 'fr'));
 

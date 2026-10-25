@@ -115,8 +115,8 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-0.5 px-2.5 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-xs font-bold transition-colors duration-200 overflow-hidden"
-                aria-label="Switch language"
-                title={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+                aria-label={t.ui.lang_switch}
+                title={t.ui.lang_switch}
               >
                 <span className={`transition-all duration-200 ${lang === 'fr' ? 'text-primary-light' : 'text-gray-400 dark:text-gray-500'}`}>
                   FR
@@ -133,7 +133,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                aria-label="Toggle theme"
+                aria-label={t.ui.theme_toggle}
               >
                 {theme === 'dark' ? <FaSun className="w-4 h-4" /> : <FaMoon className="w-4 h-4" />}
               </motion.button>
@@ -153,7 +153,8 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 whileTap={{ scale: 0.9 }}
                 className="md:hidden p-2 text-gray-600 dark:text-gray-400"
-                aria-label="Toggle menu"
+                aria-label={t.ui.menu_toggle}
+                aria-expanded={isMobileMenuOpen}
               >
                 {isMobileMenuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
               </motion.button>

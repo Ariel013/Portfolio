@@ -1,5 +1,5 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import {
   FaReact, FaNodeJs, FaHtml5, FaGitAlt, FaDocker, FaCode, FaTimes,
   FaPython, FaLanguage, FaDatabase, FaRobot, FaLinux,
@@ -150,6 +150,14 @@ const Skills = () => {
   const selectedSkills = selectedCategory ? grouped[selectedCategory] : [];
   const selectedTheme = selectedCategory ? categoryTheme[selectedCategory] : null;
 
+  // Échap referme la fenêtre de détail
+  useEffect(() => {
+    if (!selectedCategory) return;
+    const onKey = (e) => e.key === 'Escape' && setSelectedCategory(null);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedCategory]);
+
   const getCategoryMeta = (cat) => {
     return t.skills.categories[cat] || { label: cat, description: '' };
   };
@@ -218,7 +226,7 @@ const Skills = () => {
                   <IconPreview catSkills={catSkills} />
 
                   <div className={`mt-5 flex items-center gap-1.5 text-xs font-semibold ${theme.accent} opacity-70 group-hover:opacity-100 transition-opacity`}>
-                    <span>Voir les détails</span>
+                    <span>{t.ui.see_details}</span>
                     <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                     </svg>
@@ -248,6 +256,9 @@ const Skills = () => {
               exit={{ scale: 0.92, opacity: 0, y: 16 }}
               transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
               onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="skills-dialog-title"
               className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden"
             >
               <div className={`p-6 bg-gradient-to-br ${selectedTheme.gradient} border-b border-gray-100 dark:border-gray-700`}>
@@ -259,7 +270,7 @@ const Skills = () => {
                         {getCategoryMeta(selectedCategory)?.label}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <h3 id="skills-dialog-title" className="text-2xl font-bold text-gray-900 dark:text-white">
                       {getCategoryMeta(selectedCategory)?.label}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -268,6 +279,8 @@ const Skills = () => {
                   </div>
                   <button
                     onClick={() => setSelectedCategory(null)}
+                    aria-label={t.ui.close}
+                    autoFocus
                     className="p-2 rounded-xl text-gray-400 hover:text-gray-700 dark:hover:text-white hover:bg-white/60 dark:hover:bg-gray-700 transition-colors flex-shrink-0"
                   >
                     <FaTimes className="w-4 h-4" />

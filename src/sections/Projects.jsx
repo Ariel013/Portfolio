@@ -126,6 +126,14 @@ const Projects = () => {
     }
   }, [getCardWidth, totalDots, isMobile, visibleCount, GAP]);
 
+  // Échap referme la fenêtre de détail
+  useEffect(() => {
+    if (!selectedProject) return;
+    const onKey = (e) => e.key === 'Escape' && setSelectedProject(null);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedProject]);
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
@@ -252,7 +260,7 @@ const Projects = () => {
                           className="flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-xl text-xs font-bold hover:bg-gray-100 transition-colors shadow-md w-fit"
                         >
                           <FaEye className="w-3 h-3" />
-                          Voir
+                          {t.ui.see}
                         </button>
                       </div>
                     </motion.div>
@@ -265,7 +273,7 @@ const Projects = () => {
                     onClick={handleNext}
                     className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-light to-accent-light text-white rounded-full font-semibold text-sm shadow-md shadow-indigo-500/25 hover:opacity-90 transition-opacity"
                   >
-                    DÉFILER
+                    {t.ui.scroll}
                     <FaArrowRight className="w-3.5 h-3.5" />
                   </button>
 
@@ -287,6 +295,8 @@ const Projects = () => {
                         <button
                           key={i}
                           onClick={() => scrollToPage(i)}
+                          aria-label={`${t.ui.page} ${i + 1}`}
+                          aria-current={i === activeDot ? 'true' : undefined}
                           className={`rounded-full transition-all duration-300 ${
                             i === activeDot
                               ? 'w-6 h-2.5 bg-gradient-to-r from-primary-light to-accent-light'
@@ -320,6 +330,9 @@ const Projects = () => {
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
               onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="project-dialog-title"
               className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-2xl w-full max-w-2xl overflow-hidden"
             >
               <div
@@ -345,6 +358,8 @@ const Projects = () => {
                 </div>
                 <button
                   onClick={() => setSelectedProject(null)}
+                  aria-label={t.ui.close}
+                  autoFocus
                   className="absolute top-4 right-4 p-2 rounded-full bg-black/40 text-white hover:bg-black/60 transition-colors"
                 >
                   <FaTimes className="w-4 h-4" />
@@ -352,7 +367,7 @@ const Projects = () => {
               </div>
 
               <div className="p-7">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 id="project-dialog-title" className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {getTitle(selectedProject)}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm mb-5">

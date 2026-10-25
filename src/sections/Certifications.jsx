@@ -89,12 +89,6 @@ const CertIcon = ({ issuer, image, size = 'w-12 h-12' }) => {
   return <Icon className={`${size} ${color}`} />;
 };
 
-const getCredentialId = (url) => {
-  if (!url) return null;
-  const parts = url.split('/');
-  return parts[parts.length - 1] || null;
-};
-
 const Certifications = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -107,7 +101,6 @@ const Certifications = () => {
 
   const cert = certifications[currentIndex];
   const theme = issuerMap[cert.issuer] || defaultTheme;
-  const credentialId = getCredentialId(cert.url);
 
   return (
     <section
@@ -182,17 +175,9 @@ const Certifications = () => {
                       <div className="border-t border-gray-100 dark:border-gray-700 mb-4" />
 
                       <div className="grid grid-cols-2 gap-4 mb-5">
-                        {credentialId && (
-                          <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-1">
-                              ID DE VALIDATION
-                            </p>
-                            <p className={`text-sm font-semibold truncate ${theme.accent}`}>{credentialId}</p>
-                          </div>
-                        )}
                         <div>
                           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-1">
-                            DATE D'ÉMISSION
+                            {t.ui.issue_date}
                           </p>
                           <p className="text-sm font-semibold text-gray-700 dark:text-gray-200">{cert.date}</p>
                         </div>
@@ -205,7 +190,7 @@ const Certifications = () => {
                           rel="noopener noreferrer"
                           className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold text-xs uppercase tracking-widest rounded-xl hover:opacity-80 transition-opacity w-fit"
                         >
-                          VOIR LE CERTIFICAT
+                          {t.ui.view_cert}
                           <FaExternalLinkAlt className="w-3 h-3" />
                         </a>
                       ) : (
@@ -231,7 +216,7 @@ const Certifications = () => {
           <button
             onClick={prev}
             className="p-2.5 rounded-full bg-white dark:bg-gray-700 shadow-md hover:shadow-lg text-gray-600 dark:text-gray-300 hover:text-primary-light transition-all duration-200 hover:scale-110"
-            aria-label="Previous"
+            aria-label={t.ui.previous}
           >
             <FaChevronLeft className="w-4 h-4" />
           </button>
@@ -248,7 +233,8 @@ const Certifications = () => {
                       ? `w-7 h-2.5 ${th.dot}`
                       : 'w-2.5 h-2.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                   }`}
-                  aria-label={`Certif ${i + 1}`}
+                  aria-label={c.name}
+                  aria-current={i === currentIndex ? 'true' : undefined}
                 />
               );
             })}
@@ -257,7 +243,7 @@ const Certifications = () => {
           <button
             onClick={next}
             className="p-2.5 rounded-full bg-white dark:bg-gray-700 shadow-md hover:shadow-lg text-gray-600 dark:text-gray-300 hover:text-primary-light transition-all duration-200 hover:scale-110"
-            aria-label="Next"
+            aria-label={t.ui.next}
           >
             <FaChevronRight className="w-4 h-4" />
           </button>

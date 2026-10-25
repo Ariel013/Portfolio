@@ -229,6 +229,23 @@ export const translations = {
       },
     },
 
+    // ── Libellés d'interface ─────────────────────────────────────
+    ui: {
+      see: 'Voir',
+      scroll: 'DÉFILER',
+      see_details: 'Voir les détails',
+      issue_date: "DATE D'ÉMISSION",
+      view_cert: 'VOIR LE CERTIFICAT',
+      close: 'Fermer',
+      previous: 'Précédent',
+      next: 'Suivant',
+      page: 'page',
+      lang_switch: 'Switch to English',
+      theme_toggle: 'Changer de thème',
+      menu_toggle: 'Ouvrir ou fermer le menu',
+      back_to_top: 'Retour en haut',
+    },
+
     // ── Footer ───────────────────────────────────────────────────
     footer: {
       quick_links: 'Liens Rapides',
@@ -478,6 +495,23 @@ export const translations = {
         error_fields: 'Please fill in all fields.',
         error_send: 'An error occurred. Please try again or contact me directly by email.',
       },
+    },
+
+    // ── Libellés d'interface ─────────────────────────────────────
+    ui: {
+      see: 'View',
+      scroll: 'SCROLL',
+      see_details: 'See details',
+      issue_date: 'ISSUE DATE',
+      view_cert: 'VIEW CERTIFICATE',
+      close: 'Close',
+      previous: 'Previous',
+      next: 'Next',
+      page: 'page',
+      lang_switch: 'Passer en français',
+      theme_toggle: 'Toggle theme',
+      menu_toggle: 'Open or close menu',
+      back_to_top: 'Back to top',
     },
 
     // ── Footer ───────────────────────────────────────────────────

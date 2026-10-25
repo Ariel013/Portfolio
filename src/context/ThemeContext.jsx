@@ -13,7 +13,12 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   // Récupérer le thème sauvegardé ou utiliser le thème système
   const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem('theme');
+    } catch {
+      // Stockage indisponible : thème du système
+    }
     if (savedTheme) return savedTheme;
     
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -26,7 +31,11 @@ export const ThemeProvider = ({ children }) => {
     root.classList.add(theme);
     
     // Sauvegarder le thème
-    localStorage.setItem('theme', theme);
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // Préférence non conservée : sans conséquence
+    }
   }, [theme]);
 
   const toggleTheme = () => {
