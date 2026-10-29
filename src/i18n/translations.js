@@ -13,8 +13,8 @@ export const translations = {
 
     // ── Hero ─────────────────────────────────────────────────────
     hero: {
-      available: 'Disponible pour de nouvelles opportunités',
-      subtitle: 'Développeur Fullstack · Backend, Data (ML)',
+      available: "En recherche d'un contrat d'apprentissage · disponible immédiatement",
+      subtitle: 'Développeur Fullstack & IA · Data (ML)',
       tagline:
         "Je conçois des systèmes à la croisée du logiciel, des données et de l'IA : APIs robustes, pipelines de données, modèles de machine learning mis en production.",
       cta_contact: 'Me contacter',
@@ -28,17 +28,16 @@ export const translations = {
       stats: [
         { value: '3', label: "Années d'expérience", sub: 'dev, data, cyber' },
         { value: '9', label: 'Projets livrés', sub: 'web, IA & data' },
-        { value: '3', label: 'Domaines', sub: 'Backend · Data/IA · Sécu' },
+        { value: '3', label: 'Domaines', sub: 'Fullstack · Data/IA · Sécu' },
       ],
       paragraphs: [
-        "Développeur Fullstack avec une appétence pour le backend, je m'intéresse à la conception de systèmes à la croisée du logiciel, des données et de l'intelligence artificielle.",
+        "Développeur Fullstack, je m'intéresse à la conception de systèmes à la croisée du logiciel, des données et de l'intelligence artificielle.",
         "Mon expérience m'a amené à travailler sur le développement web et les APIs, ainsi que sur des pipelines de données et le déploiement de modèles de machine learning. À EPITECH, j'ai formé et accompagné des étudiants sur des projets Full Stack, Data et IA.",
-        "J'aime transformer des problématiques complexes en solutions concrètes, robustes et maintenables.",
       ],
       highlights: [
         {
-          title: 'Backend-first',
-          text: "Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel), des APIs REST robustes, testées et documentées.",
+          title: 'Fullstack',
+          text: "React, Next.js et Vue.js côté interface ; Node.js (Express, NestJS), Python (FastAPI, Flask) et PHP (Laravel) côté serveur, avec des APIs REST robustes, testées et documentées.",
         },
         {
           title: 'Data & Machine Learning',
@@ -62,7 +61,7 @@ export const translations = {
         Backend: { label: 'Backend', description: 'APIs REST, architecture serveur' },
         Frontend: { label: 'Frontend', description: 'Interfaces & expériences utilisateur' },
         'Data & ML': { label: 'Data & ML', description: 'Analyse, modèles supervisés, NLP, deep learning' },
-        'IA & Automatisation': { label: 'IA & Automatisation', description: 'Pipelines RAG, agents IA, automatisation no-code' },
+        'IA & Automatisation': { label: 'IA & Automatisation', description: 'Pipelines RAG, ETL, automatisation no-code' },
         'Bases de données': { label: 'Bases de données', description: 'Relationnel, documents, vectoriel' },
         'DevOps & Qualité': { label: 'DevOps & Qualité', description: 'Déploiement, tests, sécurité applicative' },
       },
@@ -166,7 +165,7 @@ export const translations = {
         9: {
           title: 'FIBDA Bodybuilding — Compétition',
           description:
-            "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée, 200+ tests automatisés.",
+            "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée.",
         },
       },
     },
@@ -276,8 +275,8 @@ export const translations = {
 
     // ── Hero ─────────────────────────────────────────────────────
     hero: {
-      available: 'Available for new opportunities',
-      subtitle: 'Fullstack Developer · Backend, Data (ML)',
+      available: 'Looking for an apprenticeship contract · available now',
+      subtitle: 'Fullstack & AI Developer · Data (ML)',
       tagline:
         'I design systems at the crossroads of software, data and AI: robust APIs, data pipelines, and machine learning models shipped to production.',
       cta_contact: 'Contact me',
@@ -291,17 +290,16 @@ export const translations = {
       stats: [
         { value: '3', label: 'Years of experience', sub: 'dev, data, security' },
         { value: '9', label: 'Projects delivered', sub: 'web, AI & data' },
-        { value: '3', label: 'Fields', sub: 'Backend · Data/AI · Sec' },
+        { value: '3', label: 'Fields', sub: 'Fullstack · Data/AI · Sec' },
       ],
       paragraphs: [
-        'Fullstack developer with a strong backend focus, I am drawn to designing systems where software, data and artificial intelligence meet.',
+        'Fullstack developer, I am drawn to designing systems where software, data and artificial intelligence meet.',
         'My experience spans web development and APIs, as well as data pipelines and the deployment of machine learning models. At EPITECH, I trained and mentored students on Full Stack, Data and AI projects.',
-        'I enjoy turning complex problems into concrete, robust and maintainable solutions.',
       ],
       highlights: [
         {
-          title: 'Backend-first',
-          text: 'Node.js (Express, NestJS), Python (FastAPI, Flask), PHP (Laravel) — robust, tested and documented REST APIs.',
+          title: 'Fullstack',
+          text: 'React, Next.js and Vue.js on the front end; Node.js (Express, NestJS), Python (FastAPI, Flask) and PHP (Laravel) on the server, with robust, tested and documented REST APIs.',
         },
         {
           title: 'Data & Machine Learning',
@@ -325,7 +323,7 @@ export const translations = {
         Backend: { label: 'Backend', description: 'REST APIs, server architecture' },
         Frontend: { label: 'Frontend', description: 'Interfaces & user experiences' },
         'Data & ML': { label: 'Data & ML', description: 'Analysis, supervised models, NLP, deep learning' },
-        'IA & Automatisation': { label: 'AI & Automation', description: 'RAG pipelines, AI agents, no-code automation' },
+        'IA & Automatisation': { label: 'AI & Automation', description: 'RAG pipelines, ETL, no-code automation' },
         'Bases de données': { label: 'Databases', description: 'Relational, document, vector' },
         'DevOps & Qualité': { label: 'DevOps & Quality', description: 'Deployment, testing, application security' },
       },
@@ -434,7 +432,7 @@ export const translations = {
         9: {
           title: 'FIBDA Bodybuilding — Competition',
           description:
-            "Judging and stage-management app for a federal bodybuilding competition: entries and categories, judges' ballots on their phones with server acknowledgement, rankings and finals per discipline, stage control and public screens, printable documents. Serverless TypeScript API (Hono) on Vercel, Turso database, versioned optimistic writes, 200+ automated tests.",
+            "Judging and stage-management app for a federal bodybuilding competition: entries and categories, judges' ballots on their phones with server acknowledgement, rankings and finals per discipline, stage control and public screens, printable documents. Serverless TypeScript API (Hono) on Vercel, Turso database, versioned optimistic writes.",
         },
       },
     },

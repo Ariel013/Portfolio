@@ -113,7 +113,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{t.contact.phone_label}</h4>
-                      <a href={`tel:${personalInfo.phone}`} className="text-gray-600 dark:text-gray-400 hover:text-primary-light transition-colors duration-200">
+                      <a href={`tel:${personalInfo.phone.replace(/\s/g, '')}`} className="text-gray-600 dark:text-gray-400 hover:text-primary-light transition-colors duration-200">
                         {personalInfo.phone}
                       </a>
                     </div>

@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Ariel Kevin SODJINOU",
   email: "kevin.sodjinou@epitech.eu",
-  phone: "+33 0759554925",
+  phone: "+33 7 59 55 49 25",
   whatsapp: "22961566704",
-  location: "Paris, France",
+  location: "Paris (Île-de-France)",
   avatar: "https://res.cloudinary.com/dywgshhwp/image/upload/f_auto,q_auto,w_800/v1792669711/Portrait_professionnel_d_un_homme_en_chemise_blanche_gmra6d.png",
   social: {
     linkedin: "https://www.linkedin.com/in/ariel-kevin-sodjinou/",
@@ -59,7 +59,6 @@ export const skills = [
   // IA & Automatisation
   { name: "Pipelines RAG", category: "IA & Automatisation", icon: "FaRobot" },
   { name: "OpenAI Embeddings", category: "IA & Automatisation", icon: "SiOpenai" },
-  { name: "Agents IA", category: "IA & Automatisation", icon: "FaRobot" },
   { name: "n8n", category: "IA & Automatisation", icon: "FaCode" },
   { name: "Zapier", category: "IA & Automatisation", icon: "SiZapier" },
   // Bases de données
@@ -155,7 +154,7 @@ export const projects = [
   {
     id: 9,
     title: "FIBDA Bodybuilding — Compétition",
-    description: "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée, 200+ tests automatisés.",
+    description: "Application de jugement et de régie pour une compétition fédérale de bodybuilding : préparation des inscriptions et des catégories, bulletins de jugement sur téléphone avec accusé de réception serveur, classements et finales par discipline, régie et écrans publics, documents imprimables. API serverless TypeScript (Hono) sur Vercel, base Turso, écriture optimiste versionnée.",
     image: import.meta.env.BASE_URL + "projets/fibda.webp",
     technologies: ["React", "TypeScript", "Hono", "Turso", "Vercel"],
     liveUrl: "https://fibda-bodybuilding.vercel.app/",
